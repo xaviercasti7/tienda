@@ -9,9 +9,14 @@ include("database.php");
   $sql = "INSERT INTO productos (codigo_pro,nombre_prod,cantidad)
   VALUES  ('$codigo','$nombre',$cantidad)";
   
+  
   if($conn->query($sql) === TRUE){
-	  echo "producto registrado con exito.<br>";
-	  echo"<br><a href='index.php'>regresar</a>";
+	  echo "<script lanjuage='javascript'>alert ( 'producto registrado con exito')</script>";
+	  echo "<br><a href='index.php'<regresar</a<";
+	  
+	  
+	  //echo "<br>a hfef ='index.php'<regresar</a>";
+	  header("refresh:0, url=index.php");
 	  }else{
 		  echo "Error;".$sql . "<br>". $conn->error;
 	  }
