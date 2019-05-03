@@ -18,7 +18,7 @@ include("database.php");
 	  //echo "<br>a hfef ='index.php'<regresar</a>";
 	  header("refresh:0, url=index.php");
 	  }else{
-		  echo "Error;".$sql . "<br>". $conn->error;
+		  echo "Error;".$sql . "<br>". $conn->error; 
 	  }
 	  
 	  
