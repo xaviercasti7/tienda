@@ -1,29 +1,21 @@
 <?php 
-
-include("database.php");
-
-  $codigo = $_POST["cod_prod"];
-  $nombre = $_POST["nom_prod"];
-  $cantidad = $_POST["cantidad"];
+    include("database.php");
+    $codigo = $_POST ["cod_pro"];
+    $nombre = $_POST ["nom_prod"];
+    $cantidad = $_POST ["Cantidad"];
   
-  $sql = "INSERT INTO productos (codigo_pro,nombre_prod,cantidad)
-  VALUES  ('$codigo','$nombre',$cantidad)";
-  
-  
-  if($conn->query($sql) === TRUE){
-	  echo "<script lanjuage='javascript'>alert ( 'producto registrado con exito')</script>";
-	  echo "<br><a href='index.php'<regresar</a<";
-	  
-	  
-	  //echo "<br>a hfef ='index.php'<regresar</a>";
-	  header("refresh:0, url=index.php");
-	  }else{
-		  echo "Error;".$sql . "<br>". $conn->error; 
-	  }
-	  
-	  
+    $sql = "insert into productos (codigo_pro,nombre_pro,cantidad)
+    values('$codigo','$nombre',$cantidad)";
 
+    if ($conn->query($sql)===true) {
+        echo "<script languaje='javascript'>alert('producto registrado satisfactoriamente')</script> ";
+        //echo "<br><a href='index.php'>Regresar</a>";
+        header ("refresh:0; url=index.php");
+    } else {
+        echo "Error: ".$sql . "<br>".$conn->error;
+    }
+    
 
-
+ 
 
 ?>

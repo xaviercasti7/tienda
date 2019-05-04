@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 06-04-2019 a las 02:57:33
+-- Tiempo de generación: 06-04-2019 a las 02:50:23
 -- Versión del servidor: 10.1.29-MariaDB
 -- Versión de PHP: 7.2.0
 
@@ -31,18 +31,11 @@ SET time_zone = "+00:00";
 CREATE TABLE `productos` (
   `id` int(11) NOT NULL,
   `codigo_pro` varchar(7) COLLATE utf8_bin NOT NULL,
-  `nombre_prod` varchar(20) COLLATE utf8_bin NOT NULL,
+  `nombre_pro` varchar(20) COLLATE utf8_bin NOT NULL,
   `cantidad` int(11) NOT NULL,
-  `ruta_imagen` varchar(50) COLLATE utf8_bin NOT NULL,
-  `estado` tinyint(1) NOT NULL
+  `ruta_imagen` varchar(50) COLLATE utf8_bin DEFAULT NULL,
+  `estado` tinyint(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
-
---
--- Volcado de datos para la tabla `productos`
---
-
-INSERT INTO `productos` (`id`, `codigo_pro`, `nombre_prod`, `cantidad`, `ruta_imagen`, `estado`) VALUES
-(1, '2', 'agua', 2, '', 0);
 
 --
 -- Índices para tablas volcadas
