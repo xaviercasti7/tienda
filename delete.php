@@ -1,20 +1,17 @@
 <?php
-	//1. Connection
-    include("database.php");
-	
-	//2. Get data
-	$id = $_GET['id'];
-	$cod = $_GET['cod'];
-	
-	//3. Create SQL
-	$sql = "DELETE FROM productos WHERE id = $id";
-	
-	//4. Execute SQL
-	$conn->query($sql);
-	
-	//5. Show confirmation message
-	echo "<script languaje='javascript'>alert('producto eliminado satisfactoriamente')</script> ";
-	header ("refresh:0; url=index.php");
-	
-	
+    include 'database.php';
+
+    $id=$_GET['id'];
+    $cod=$_GET['cod'];
+    
+    $sql = "DELETE FROM productos WHERE item=$id AND codprod=$cod";
+
+    $conn ->query($sql);
+    echo "<script languaje='javascript'>alert('Producto eliminado')
+    </script>";
+
+    header("refresh:0; url=index.php");
+
+    
+
 ?>

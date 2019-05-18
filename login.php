@@ -1,30 +1,36 @@
-<html> 
-    <head>
-        <title>signup</title>
-    </head> 
-    <body bgcolor="#FFFFFF">
-        <litle><b>LOGIN</title>
-    </head>
-     <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
 
-     <form>
-    <br><label for="nombre">username:</label><br>
-    <br><input type="" pattern="[A-Z]{3,15}" litle="Solo mayuscula"><br>
+<div class="container">
+  <h2>Login</h2>
+  <form action="/action_page.php">
+    <div class="form-group">
+      <label for="email">Username:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+    </div>
+    <div class="form-group form-check">
+      <label class="form-check-label">
+        <input class="form-check-input" type="checkbox" name="remember"> Remember me
+		<br><a href="signup.php">Sign up</a><br>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary">Sign in</button>
+  </form>
+</div>
 
-   
-     <br><label for="nombre">password:</label><br>
-      <br><input type="password" placeholder="password" maxlength="" name="nombre" id="nombre"><br>
-
-        
-
-                              
- 
-<br><br>
-<input type="submit" value="Registrarse">
-           
-    
-
- </form>
-
-    </body>
+</body>
 </html>
